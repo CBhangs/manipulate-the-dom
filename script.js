@@ -49,14 +49,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Part 6
 
-function function1() {
-  var ul = document. getElementById("past-races");
-  var li = document. createElement("li");
-  li.appendChild(document.createTextNode("Queens"));
-  ul.appendChild(li);
-  }
+ const li = document.createElement("li")
+ li.textContent = "Queens"
+ document.querySelector("#past-races").appendChild(li)
   
   // Part 7
+
+  const blogPost = document.createElement("div")
+  blogPost.classList.add("blog-post")
+  const heading = document.createElement("h2")
+  heading.textContent = "Queens"
+  const pEl = document .createElement("p")
+  pEl.textContent = "My birthplace"
+
+  document.querySelector(".main").appendChild(blogPost)
+
+  blogPost.appendChild(heading)
+  blogPost.appendChild(pEl)
+
 
 
   // Part 8
