@@ -71,10 +71,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Part 8
 
+  let newQuote = document.querySelector('#quote-title')
+  newQuote.addEventListener('click', randomQuote);
+  
 
   // Part 9
 
-
-
-
+  let allPosts = document.querySelectorAll('blog-post', 'purple')
+  //allPost are variables of allPosts
+  for (let allPost of allPosts) {
+    //iterate over allPosts
+    //if mouse enters, it toggles red
+    allPost.addEventListener('mouseenter', function() {
+      allPost.classList.toggle('red')
+    });
+    //when mouse leaves
+    allPost.addEventListener('mouseout', function() {
+      //it removes class red
+      allPost.classList.remove('red')
+      //if allPost doesn't contain class purple it will toggle purple
+      if (!allPost.classList.contains('purple')) {
+        allPost.classList.toggle('purple')
+      }
+    });
+  };
 });
