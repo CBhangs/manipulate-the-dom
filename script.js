@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // Part 9
 
-  let allPosts = document.querySelectorAll('blog-post', 'purple')
+  let allPosts = document.querySelectorAll(.'blog-post', 'purple')
   //allPost are variables of allPosts
   for (let allPost of allPosts) {
     //iterate over allPosts
